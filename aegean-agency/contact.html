@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact aegeanAI. No discovery calls — use the form to ask a specific pre-purchase question. Response within one business day.">
+  <title>Contact — aegeanAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="aegeanAI — home">
+        Aegean<span>.</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="nav__cta">Browse Packages</a></li>
+      </ul>
+      <button
+        class="nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ─────────────────────────────────────────── -->
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="services.html" class="nav__cta-mobile">Browse Packages</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Page Hero ───────────────────────────────────────────── -->
+    <div class="page-hero section">
+      <div class="container">
+        <h1>Get in Touch</h1>
+        <p>
+          No discovery calls. If you have a specific question about a package,
+          use the form below. We respond within one business day.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Contact Layout ──────────────────────────────────────── -->
+    <section class="section" aria-label="Contact information and form">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Left column: contact context -->
+          <div class="contact-info">
+            <h3>Before You Write</h3>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Response Time</span>
+              <span class="contact-detail__value">
+                We respond to all contact form submissions within one business day.
+                Business days are Monday through Friday.
+              </span>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">What This Form Is For</span>
+              <span class="contact-detail__value">
+                Pre-purchase questions about a specific package. Revision requests
+                should come through the delivery email thread, not this form.
+              </span>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Not Sure Which Package?</span>
+              <span class="contact-detail__value">
+                Describe what you're trying to accomplish. We'll point you to the
+                right package or let you know if nothing in the catalog fits.
+              </span>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Already Ordered?</span>
+              <span class="contact-detail__value">
+                Refer to the confirmation email you received after completing your
+                intake form. It contains the delivery timeline and your contact
+                point for that order.
+              </span>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Billing Questions</span>
+              <span class="contact-detail__value">
+                All payments are processed via Stripe. Receipts are sent
+                automatically. For billing disputes, contact Stripe support
+                directly or reach out here.
+              </span>
+            </div>
+          </div><!-- /.contact-info -->
+
+          <!-- Right column: form button -->
+          <div class="contact-form-panel">
+            <h3>Send a Message</h3>
+            <p>
+              The form opens in a new tab and takes under two minutes to complete.
+              Include as much detail as you can about what you're trying to accomplish.
+            </p>
+            <!--
+              Replace TALLY_FORM_URL with your actual Tally form URL before deploying.
+              Example: https://tally.so/r/xxxxxxxx
+            -->
+            <a
+              href="TALLY_FORM_URL"
+              target="_blank"
+              rel="noopener"
+              class="btn btn--primary btn--lg"
+              aria-label="Open contact form — opens in a new tab"
+            >
+              Open Contact Form &rarr;
+            </a>
+            <p class="contact-note">
+              Powered by Tally. Your information is used only to respond to your inquiry.
+            </p>
+          </div><!-- /.contact-form-panel -->
+
+        </div><!-- /.contact-layout -->
+      </div>
+    </section>
+
+    <!-- ── Redirect CTA ─────────────────────────────────────────── -->
+    <section class="section section--surface" aria-labelledby="contact-alt-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="contact-alt-heading">Already Know What You Need?</h2>
+          <p>
+            Skip the message and go straight to the catalog.
+            Every package is described in detail.
+          </p>
+          <a href="services.html" class="btn btn--primary btn--lg">Browse All Packages</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">Aegean<span>.</span></div>
+          <div class="footer__tagline">AI-powered deliverables. Flat fee. Fast turnaround.</div>
+        </div>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 aegeanAI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/packages.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The full catalog of AI-powered deliverables. Fixed scope, fixed price, fixed timeline. No retainers, no discovery calls.">
+  <title>Services — aegeanAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="aegeanAI — home">
+        Aegean<span>.</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="nav__cta">Browse Packages</a></li>
+      </ul>
+      <button
+        class="nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ─────────────────────────────────────────── -->
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="services.html" class="nav__cta-mobile">Browse Packages</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Page Hero ───────────────────────────────────────────── -->
+    <div class="page-hero section">
+      <div class="container">
+        <h1>The Full Catalog</h1>
+        <p>
+          Every package is a fixed scope, fixed price, fixed timeline.
+          No retainers, no discovery calls.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Catalog ─────────────────────────────────────────────── -->
+    <!--
+      main.js reads the packages array from packages.js,
+      groups by tier (starter → entry → mid → pro),
+      and renders catalog-tier sections with card grids into #catalog.
+    -->
+    <section class="section" aria-label="Package catalog">
+      <div class="container">
+        <div id="catalog">
+          <div class="js-loading">Loading catalog&hellip;</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Bottom CTA ──────────────────────────────────────────── -->
+    <section class="section section--surface" aria-labelledby="catalog-cta-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="catalog-cta-heading">Not Sure Which Package Is Right?</h2>
+          <p>
+            Read the descriptions carefully. Still unsure? Use the contact form
+            to describe what you're trying to accomplish.
+          </p>
+          <a href="contact.html" class="btn btn--primary btn--lg">Ask a Question</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">Aegean<span>.</span></div>
+          <div class="footer__tagline">AI-powered deliverables. Flat fee. Fast turnaround.</div>
+        </div>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 aegeanAI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/packages.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

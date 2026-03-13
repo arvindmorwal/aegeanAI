@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Here's exactly what happens when you order from aegeanAI. No surprises, no calls, no ambiguity.">
+  <title>How It Works — aegeanAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <style>
+    /* ── Vertical step timeline (How It Works page only) ──────── */
+
+    .hiw-steps {
+      max-width: 680px;
+      margin-inline: auto;
+    }
+
+    .hiw-step {
+      display: flex;
+      gap: var(--space-3);
+      position: relative;
+    }
+
+    /* All steps except the last get a vertical connector line */
+    .hiw-step:not(:last-child) {
+      padding-bottom: var(--space-5);
+    }
+
+    /* Left column: number bubble + connecting line */
+    .hiw-step__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 40px;
+    }
+
+    .hiw-step__num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--color-accent-glow);
+      border: 1px solid rgba(124, 92, 252, 0.35);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--color-accent);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hiw-step__line {
+      width: 1px;
+      flex: 1;
+      background-color: var(--color-border);
+      margin-top: 6px;
+      min-height: 24px;
+    }
+
+    .hiw-step:last-child .hiw-step__line {
+      display: none;
+    }
+
+    /* Right column: content */
+    .hiw-step__content {
+      flex: 1;
+      padding-top: 10px;
+      padding-bottom: var(--space-1);
+    }
+
+    .hiw-step__title {
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-1);
+      line-height: 1.3;
+    }
+
+    .hiw-step__body {
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+      line-height: 1.75;
+    }
+
+    /* ── What to provide grid ─────────────────────────────────── */
+
+    .provision-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+      max-width: 680px;
+      margin-inline: auto;
+    }
+
+    @media (min-width: 600px) {
+      .provision-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .provision-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+      padding: var(--space-2) var(--space-3);
+      background-color: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      line-height: 1.55;
+      transition: border-color var(--transition);
+    }
+
+    .provision-item:hover {
+      border-color: rgba(124, 92, 252, 0.25);
+    }
+
+    .provision-item__dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="aegeanAI — home">
+        Aegean<span>.</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="nav__cta">Browse Packages</a></li>
+      </ul>
+      <button
+        class="nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ─────────────────────────────────────────── -->
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="services.html" class="nav__cta-mobile">Browse Packages</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Page Hero ───────────────────────────────────────────── -->
+    <div class="page-hero section">
+      <div class="container">
+        <h1>Here's Exactly What Happens When You Order</h1>
+        <p>
+          No surprises. No calls. No ambiguity.
+          This is the full process from payment to delivery.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── 5-Step Process ──────────────────────────────────────── -->
+    <section class="section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="process-heading">The Process</h2>
+          <p>Every order follows the same five steps. Every time.</p>
+        </div>
+
+        <div class="hiw-steps">
+
+          <div class="hiw-step">
+            <div class="hiw-step__left">
+              <div class="hiw-step__num" aria-hidden="true">1</div>
+              <div class="hiw-step__line"></div>
+            </div>
+            <div class="hiw-step__content">
+              <h3 class="hiw-step__title">Pick Your Package</h3>
+              <p class="hiw-step__body">
+                Browse the catalog on the Services page. Read each description carefully —
+                every package lists exactly what you receive, what format it's delivered in,
+                and how long it takes. If a package matches what you need, move to the next step.
+              </p>
+            </div>
+          </div>
+
+          <div class="hiw-step">
+            <div class="hiw-step__left">
+              <div class="hiw-step__num" aria-hidden="true">2</div>
+              <div class="hiw-step__line"></div>
+            </div>
+            <div class="hiw-step__content">
+              <h3 class="hiw-step__title">Complete Payment</h3>
+              <p class="hiw-step__body">
+                Click "Order This Package" on any card. You'll go to the secure Stripe checkout.
+                Payment is processed immediately and you'll receive a Stripe confirmation email.
+                No account creation required.
+              </p>
+            </div>
+          </div>
+
+          <div class="hiw-step">
+            <div class="hiw-step__left">
+              <div class="hiw-step__num" aria-hidden="true">3</div>
+              <div class="hiw-step__line"></div>
+            </div>
+            <div class="hiw-step__content">
+              <h3 class="hiw-step__title">Complete the Intake Form</h3>
+              <p class="hiw-step__body">
+                After payment, you'll be redirected to a short intake form. Answer every question
+                honestly and thoroughly — the quality of your deliverable depends on the quality
+                of your intake. The delivery clock starts the moment your completed form is
+                received. Incomplete forms delay delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="hiw-step">
+            <div class="hiw-step__left">
+              <div class="hiw-step__num" aria-hidden="true">4</div>
+              <div class="hiw-step__line"></div>
+            </div>
+            <div class="hiw-step__content">
+              <h3 class="hiw-step__title">Work Is Produced</h3>
+              <p class="hiw-step__body">
+                Your deliverable is produced using AI tools guided by a human. The prompting,
+                structuring, editing, and quality review are all done by a real person.
+                You're not getting raw AI output. Every deliverable is checked against the
+                agreed scope before it leaves.
+              </p>
+            </div>
+          </div>
+
+          <div class="hiw-step">
+            <div class="hiw-step__left">
+              <div class="hiw-step__num" aria-hidden="true">5</div>
+              <div class="hiw-step__line"></div>
+            </div>
+            <div class="hiw-step__content">
+              <h3 class="hiw-step__title">Delivery and Revision</h3>
+              <p class="hiw-step__body">
+                Your finished deliverable arrives in your inbox as a Google Doc (or the format
+                stated in your package) within the delivery window. Every package includes one
+                round of revisions — submit one consolidated set of notes and updates come back
+                within 24 hours.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /.hiw-steps -->
+      </div>
+    </section>
+
+    <!-- ── What You Need to Provide ────────────────────────────── -->
+    <section class="section section--surface" aria-labelledby="provision-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="provision-heading">What You Need to Provide</h2>
+          <p>The intake form covers all of this. Have these ready before you fill it out.</p>
+        </div>
+        <div class="provision-grid">
+          <div class="provision-item">
+            <span class="provision-item__dot" aria-hidden="true"></span>
+            A clear description of your business and what you sell
+          </div>
+          <div class="provision-item">
+            <span class="provision-item__dot" aria-hidden="true"></span>
+            Your target audience and who you're writing for
+          </div>
+          <div class="provision-item">
+            <span class="provision-item__dot" aria-hidden="true"></span>
+            Any examples of your existing tone or brand voice
+          </div>
+          <div class="provision-item">
+            <span class="provision-item__dot" aria-hidden="true"></span>
+            Specific goals for the deliverable — what it needs to accomplish
+          </div>
+          <div class="provision-item">
+            <span class="provision-item__dot" aria-hidden="true"></span>
+            Any platforms, formats, or technical requirements
+          </div>
+          <div class="provision-item">
+            <span class="provision-item__dot" aria-hidden="true"></span>
+            The email address where you want the deliverable sent
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ Accordion (pure CSS details/summary) ────────────── -->
+    <section class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="faq-heading">Common Questions</h2>
+          <p>Answers to what most people ask before they order.</p>
+        </div>
+
+        <div class="faq">
+
+          <details>
+            <summary>Is this AI-generated content, or is a human writing it?</summary>
+            <div class="faq__answer">
+              Both. Every deliverable is produced using AI tools guided by a human &mdash;
+              the prompting, structuring, editing, and quality review are done by a real person.
+              You're not getting raw AI output.
+            </div>
+          </details>
+
+          <details>
+            <summary>What if I need revisions?</summary>
+            <div class="faq__answer">
+              Every package includes one round of revisions. Submit one consolidated set of
+              revision notes and we'll update the work within 24 hours. Additional rounds
+              are $49 each.
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I get to talk to someone before I buy?</summary>
+            <div class="faq__answer">
+              No discovery calls. Each package has a clear description of what you get.
+              If you have a specific question, reach out via the contact form &mdash; we respond
+              within one business day.
+            </div>
+          </details>
+
+          <details>
+            <summary>What if I'm not happy with what I receive?</summary>
+            <div class="faq__answer">
+              Use your included revision round. If the deliverable genuinely doesn't match
+              the agreed scope, contact us and we'll make it right.
+            </div>
+          </details>
+
+          <details>
+            <summary>How fast is the turnaround, really?</summary>
+            <div class="faq__answer">
+              The stated timeframe is a commitment, not an estimate. The clock starts when
+              your completed intake form is received.
+            </div>
+          </details>
+
+          <details>
+            <summary>What format do I receive my deliverable in?</summary>
+            <div class="faq__answer">
+              Most deliverables are Google Docs. Some structured documents may be delivered
+              as PDFs. Format is confirmed in your intake confirmation email.
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I order more than one package at a time?</summary>
+            <div class="faq__answer">
+              Yes. Each package is processed independently with its own intake form
+              and delivery window.
+            </div>
+          </details>
+
+          <details>
+            <summary>What if I'm not sure which package is right for me?</summary>
+            <div class="faq__answer">
+              Read the descriptions carefully. If still unsure, use the contact form to
+              describe what you're trying to accomplish.
+            </div>
+          </details>
+
+        </div><!-- /.faq -->
+      </div>
+    </section>
+
+    <!-- ── CTA ─────────────────────────────────────────────────── -->
+    <section class="section section--surface" aria-labelledby="hiw-cta-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="hiw-cta-heading">Ready to Place Your First Order?</h2>
+          <p>Browse the full catalog and find the package that fits your next project.</p>
+          <a href="services.html" class="btn btn--primary btn--lg">View All Packages</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">Aegean<span>.</span></div>
+          <div class="footer__tagline">AI-powered deliverables. Flat fee. Fast turnaround.</div>
+        </div>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 aegeanAI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/packages.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

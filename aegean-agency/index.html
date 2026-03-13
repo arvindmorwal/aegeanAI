@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-powered deliverables for solopreneurs and small business owners. Flat fee. Fast turnaround. No calls, no contracts.">
+  <title>aegeanAI — AI Deliverables for Small Businesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="aegeanAI — home">
+        Aegean<span>.</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="nav__cta">Browse Packages</a></li>
+      </ul>
+      <button
+        class="nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ─────────────────────────────────────────── -->
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="services.html">Services</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="services.html" class="nav__cta-mobile">Browse Packages</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Hero ────────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <span class="hero__eyebrow">AI-Powered Deliverables</span>
+        <h1 id="hero-heading">
+          Stop Paying Agency Prices for Work You Could Automate
+        </h1>
+        <p class="hero__sub">
+          AI-powered deliverables for solopreneurs and small business owners.
+          Flat fee. Fast turnaround. No calls, no contracts.
+        </p>
+        <div class="hero__actions">
+          <a href="services.html" class="btn btn--primary btn--lg">Browse All Packages</a>
+          <a href="how-it-works.html" class="btn btn--secondary btn--lg">See How It Works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why It Works ────────────────────────────────────────── -->
+    <section class="section section--surface" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="why-heading">Why It Works</h2>
+          <p>No retainers. No discovery calls. Just clear deliverables at honest prices.</p>
+        </div>
+        <div class="trust-bullets">
+          <div class="trust-bullet">
+            <div class="trust-bullet__icon" aria-hidden="true">$</div>
+            <div class="trust-bullet__text">
+              <strong>Flat-fee pricing from $97 to $497</strong>
+              No hourly billing, no scope creep.
+            </div>
+          </div>
+          <div class="trust-bullet">
+            <div class="trust-bullet__icon" aria-hidden="true">48</div>
+            <div class="trust-bullet__text">
+              <strong>24 to 72-hour delivery on every package</strong>
+              Real deadlines, met consistently.
+            </div>
+          </div>
+          <div class="trust-bullet">
+            <div class="trust-bullet__icon" aria-hidden="true">&#10003;</div>
+            <div class="trust-bullet__text">
+              <strong>Done-for-you output, ready to use</strong>
+              Not a template you have to figure out yourself.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How It Works (summary) ──────────────────────────────── -->
+    <section class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="how-heading">How It Works</h2>
+          <p>Three steps. No meetings. Your deliverable in your inbox.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step__number" aria-hidden="true">1</div>
+            <h3 class="step__title">Pick Your Package</h3>
+            <p class="step__body">
+              Browse the catalog. Every package has a clear description, price, and turnaround.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step__number" aria-hidden="true">2</div>
+            <h3 class="step__title">Fill Out the Intake Form</h3>
+            <p class="step__body">
+              Answer a few questions. No call required.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step__number" aria-hidden="true">3</div>
+            <h3 class="step__title">Receive Your Deliverable</h3>
+            <p class="step__body">
+              Your finished work lands in your inbox within the stated timeframe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured Packages ───────────────────────────────────── -->
+    <section class="section section--surface" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="featured-heading">Start Here</h2>
+          <p>Low-risk entry points. Clear scope. Fast delivery.</p>
+        </div>
+        <!--
+          Cards injected by main.js: filters packages where launchPackage === true
+          and renders them into .cards-grid inside this container.
+        -->
+        <div id="featured-packages">
+          <div class="js-loading">Loading packages&hellip;</div>
+        </div>
+        <div class="text-center mt-6">
+          <a href="services.html" class="btn btn--ghost">View the Full Catalog &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Final CTA Banner ─────────────────────────────────────── -->
+    <section class="section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="cta-heading">Ready to Stop Figuring It Out Yourself?</h2>
+          <p>Pick a package. Fill out the form. Get your deliverable.</p>
+          <a href="services.html" class="btn btn--primary btn--lg">Browse All Packages</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">Aegean<span>.</span></div>
+          <div class="footer__tagline">AI-powered deliverables. Flat fee. Fast turnaround.</div>
+        </div>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 aegeanAI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/packages.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
