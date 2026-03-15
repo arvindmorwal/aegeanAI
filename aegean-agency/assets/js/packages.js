@@ -13,7 +13,7 @@ const packages = [
     price: 97,
     delivery: "24 hours",
     deliverable: "Google Doc or Notion page",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_cNi5kE3jxeAX7wG8WKbQY00",
     launchPackage: true
   },
 
@@ -27,7 +27,7 @@ const packages = [
     price: 147,
     delivery: "24 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_4gMcN6dYb0K79EO7SGbQY01",
     launchPackage: true
   },
   {
@@ -39,7 +39,7 @@ const packages = [
     price: 147,
     delivery: "24 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_dRm14o5rFboL5oyeh4bQY02",
     launchPackage: true
   },
   {
@@ -51,7 +51,7 @@ const packages = [
     price: 147,
     delivery: "24 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_4gM6oI4nBeAX4ku8WKbQY03",
     launchPackage: true
   },
 
@@ -65,7 +65,7 @@ const packages = [
     price: 197,
     delivery: "24 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_9B64gAg6jfF12cma0ObQY04",
     launchPackage: false
   },
   {
@@ -77,7 +77,7 @@ const packages = [
     price: 197,
     delivery: "48 hours",
     deliverable: "Notion page or Google Sheet",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_eVq28scU7eAX5oydd0bQY05",
     launchPackage: false
   },
   {
@@ -89,7 +89,7 @@ const packages = [
     price: 247,
     delivery: "48 hours",
     deliverable: "Google Doc bundle (3 documents)",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_3cI9AUg6j78vaIS8WKbQY06",
     launchPackage: false
   },
   {
@@ -101,7 +101,7 @@ const packages = [
     price: 197,
     delivery: "24 hours",
     deliverable: "Google Doc or CSV",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_7sYbJ29HV0K7g3c3CqbQY07",
     launchPackage: false
   },
   {
@@ -113,7 +113,7 @@ const packages = [
     price: 247,
     delivery: "48 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_fZuaEY8DR50n04e4GubQY08",
     launchPackage: false
   },
   {
@@ -125,7 +125,7 @@ const packages = [
     price: 197,
     delivery: "24 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_3cIaEY3jx9gD18i7SGbQY09",
     launchPackage: false
   },
   {
@@ -137,7 +137,7 @@ const packages = [
     price: 197,
     delivery: "48 hours",
     deliverable: "Notion page or Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_28E6oIdYb2SfbMW2ymbQY0a",
     launchPackage: false
   },
   {
@@ -149,7 +149,7 @@ const packages = [
     price: 247,
     delivery: "48 hours",
     deliverable: "Google Doc template + instructions",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_8x25kE5rFdwT18ia0ObQY0b",
     launchPackage: false
   },
 
@@ -163,7 +163,7 @@ const packages = [
     price: 297,
     delivery: "48 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_14AfZi3jx8czdV4b4SbQY0c",
     launchPackage: false
   },
   {
@@ -175,7 +175,7 @@ const packages = [
     price: 297,
     delivery: "48 hours",
     deliverable: "Canva PDF + Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_14A7sM5rFdwT7wGfl8bQY0d",
     launchPackage: false
   },
   {
@@ -187,7 +187,7 @@ const packages = [
     price: 297,
     delivery: "48 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_eVq4gA5rFcsPcR0fl8bQY0e",
     launchPackage: false
   },
   {
@@ -199,7 +199,7 @@ const packages = [
     price: 497,
     delivery: "72 hours",
     deliverable: "Google Doc",
-    stripeLink: "PASTE_STRIPE_LINK_HERE",
+    stripeLink: "https://buy.stripe.com/test_4gMaEY3jxfF1g3c1uibQY0f",
     launchPackage: false
   }
 ];
