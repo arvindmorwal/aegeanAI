@@ -1192,6 +1192,134 @@
   white-space: nowrap;
 }
 
+/* ── Hero Animation ──────────────────────────────────────────── */
+
+/* Dot grid background */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(124, 92, 252, 0.18) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse 90% 100% at 50% 0%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 100% at 50% 0%, black 20%, transparent 100%);
+  animation: grid-drift 24s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes grid-drift {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-18px, -12px); }
+}
+
+/* Ambient glow orb */
+.hero__orb {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 420px;
+  background: radial-gradient(ellipse at center, rgba(124, 92, 252, 0.13) 0%, transparent 68%);
+  pointer-events: none;
+  animation: orb-breathe 6s ease-in-out infinite;
+}
+
+@keyframes orb-breathe {
+  0%, 100% { opacity: 0.8; transform: translateX(-50%) scale(1); }
+  50%       { opacity: 1;   transform: translateX(-50%) scale(1.08); }
+}
+
+/* Hero must be relative for absolute children */
+.hero { position: relative; overflow: hidden; }
+
+/* Eyebrow entrance */
+.hero__eyebrow--anim {
+  opacity: 0;
+  animation: eyebrow-in 0.5s ease forwards 0.15s;
+}
+
+@keyframes eyebrow-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Typewriter wrapper — min-height prevents layout shift */
+.hero__headline {
+  min-height: 1.1em;
+}
+
+.hero__typewriter {
+  display: inline;
+}
+
+/* Draft text — muted, not committed */
+.hero__stream {
+  color: var(--color-text);
+  transition: color 0.25s ease;
+}
+
+.hero__stream.is-draft {
+  color: var(--color-muted);
+}
+
+/* Final lock — pulse glow then settle */
+.hero__stream.is-locked {
+  animation: headline-lock 0.6s ease forwards;
+}
+
+@keyframes headline-lock {
+  0%   { text-shadow: none; }
+  40%  { text-shadow: 0 0 40px rgba(124, 92, 252, 0.5), 0 0 80px rgba(124, 92, 252, 0.2); }
+  100% { text-shadow: none; }
+}
+
+/* Cursor */
+.hero__cursor {
+  display: inline-block;
+  font-weight: 300;
+  margin-left: 2px;
+  color: var(--color-muted);
+  animation: cursor-blink 0.9s step-end infinite;
+  transition: color 0.2s ease;
+  vertical-align: baseline;
+}
+
+/* Draft cursor — orange/warm = "not right yet" */
+.hero__cursor.cursor--draft {
+  color: #F97316;
+  animation: cursor-blink 0.6s step-end infinite;
+}
+
+/* Final cursor — accent = "this is the one" */
+.hero__cursor.cursor--final {
+  color: var(--color-accent);
+  animation: cursor-blink 0.75s step-end infinite;
+}
+
+/* Lock — fast blink then hide */
+.hero__cursor.cursor--lock {
+  animation: cursor-blink 0.25s step-end 3;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Sub and CTA — hidden until JS reveals them */
+.hero__sub--anim,
+.hero__actions--anim {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero__sub--anim.is-visible,
+.hero__actions--anim.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── JS Loading Placeholder ──────────────────────────────────── */
 .js-loading {
   display: flex;

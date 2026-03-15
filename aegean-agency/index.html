@@ -51,16 +51,28 @@
 
     <!-- ── Hero ────────────────────────────────────────────────── -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="container">
-        <span class="hero__eyebrow">AI-Powered Deliverables</span>
-        <h1 id="hero-heading">
-          Stop Paying Agency Prices for Work You Could Automate
+      <!-- background dot grid -->
+      <div class="hero__grid" aria-hidden="true"></div>
+      <!-- ambient glow orb -->
+      <div class="hero__orb" aria-hidden="true"></div>
+
+      <div class="container" style="position:relative;">
+        <span class="hero__eyebrow hero__eyebrow--anim">AI-Powered Deliverables</span>
+
+        <!-- Screen readers get the full static text immediately.
+             Sighted users see it typed out by hero-animation.js. -->
+        <h1 id="hero-heading" class="hero__headline">
+          <span class="sr-only">Stop Paying Agency Prices for Work You Could Automate</span>
+          <span aria-hidden="true" class="hero__typewriter">
+            <span id="hero-stream" class="hero__stream"></span><span id="hero-cursor" class="hero__cursor" aria-hidden="true">|</span>
+          </span>
         </h1>
-        <p class="hero__sub">
+
+        <p id="hero-sub" class="hero__sub hero__sub--anim">
           AI-powered deliverables for solopreneurs and small business owners.
           Flat fee. Fast turnaround. No calls, no contracts.
         </p>
-        <div class="hero__actions">
+        <div id="hero-actions" class="hero__actions hero__actions--anim">
           <a href="services.html" class="btn btn--primary btn--lg">Browse All Packages</a>
           <a href="how-it-works.html" class="btn btn--secondary btn--lg">See How It Works</a>
         </div>
@@ -187,5 +199,6 @@
 
   <script src="assets/js/packages.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/hero-animation.js"></script>
 </body>
 </html>
